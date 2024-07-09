@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norse-Bold.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  height: 100vh;
+}
+main div {
+  flex: 1;
+}
+main > div:first-child {
+  background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
+  background-size: cover;
+  flex-grow: 0.5;
+  position: relative;
+}
+main > div:nth-child(2) {
+  align-self: center;
+}
+.logo {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.logo img {
+  width: 80px;
+  height: 100px;
+}
+.logo span {
+  font-family: "Norse";
+  color: white;
+  font-size: 5rem;
+}
+.credits {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+a {
+  color: white;
+}
+.form-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 10px;
+  justify-content: start;
+}
+.form-row div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}
+form {
+  padding: 20px 40px;
+  box-shadow: 0px 2px 10px 2px black;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+label {
+  font-size: 0.6rem;
+  font-weight: lighter;
+}
+input:focus {
+  border: 1px solid black;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 220px;
+  padding: 2px;
+  border: 1px solid #e5e7eb;
+}
+input[type="password"]:invalid {
+  border: 1px solid red;
+}
+div > p {
+  margin-left: 40px;
+  font-weight: 600;
+  width: 80%;
+}
+form p {
+  margin-bottom: 20px;
+}
+button {
+  margin-left: 40px;
+  background-color: #596d48;
+  padding: 10px 25px;
+  border: 0.5px solid black;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+main p:last-child {
+  margin-top: 15px;
+}
+.login {
+  color: green;
+  text-decoration: none;
+}
+main > div:nth-child(2) > p:nth-child(3) {
+  margin-top: 15px;
+}
