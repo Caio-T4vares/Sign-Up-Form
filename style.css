@@ -45,7 +45,7 @@ main > div:nth-child(2) {
 .credits {
   position: absolute;
   color: white;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
   font-size: 0.8rem;
   text-align: center;
@@ -65,25 +65,35 @@ a {
   flex-grow: 0;
 }
 form {
-  padding: 20px 40px;
-  box-shadow: 0px 2px 10px 2px black;
   margin-top: 50px;
+}
+.fieldset {
   margin-bottom: 30px;
-  background-color: white;
+  padding: 20px 40px;
+  width: 100%;
+  box-shadow: 0px 2px 10px -4px black;
 }
 label {
   font-size: 0.6rem;
+  margin-bottom: 2px;
   font-weight: lighter;
 }
-input:focus {
-  border: 1px solid black;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  border: 1px solid blue;
+  box-shadow: 0px 2px 10px -4px black;
+  outline: none;
 }
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"] {
   width: 220px;
   padding: 2px;
   border: 1px solid #e5e7eb;
+  border-radius: 4px;
 }
 input[type="password"]:invalid {
   border: 1px solid red;
@@ -93,8 +103,12 @@ div > p {
   font-weight: 600;
   width: 80%;
 }
+.fieldset > p {
+  margin-left: 0px;
+}
 form p {
   margin-bottom: 20px;
+  font-weight: 600;
 }
 button {
   margin-left: 40px;
@@ -105,9 +119,13 @@ button {
   color: white;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
-main p:last-child {
-  margin-top: 15px;
+form > p:last-child {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 0.8rem;
+  font-weight: normal;
 }
 .login {
   color: green;
